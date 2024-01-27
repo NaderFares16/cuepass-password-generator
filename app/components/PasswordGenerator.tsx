@@ -91,48 +91,44 @@ export default function PasswordGenerator() {
               onChange={(e) => setLength(parseInt(e.target.value))}
             />
         </div>
-        <div className="generator-checkbox">
-          <div>
-            <label>
-              <input
-                type="checkbox"
-                checked={includeUpperCase}
-                onChange={(e) => setIncludeUpperCase(e.target.checked)}
-              />
-              Include Uppercase Letters
-            </label>
-          </div>
-          <div>
-            <label>
-              <input
-                type="checkbox"
-                checked={includeLowerCase}
-                onChange={(e) => setIncludeLowerCase(e.target.checked)}
-              />
-              Include Lowercase Letters
-            </label>
-          </div>
-          <div>
-            <label>
-              <input
-                type="checkbox"
-                checked={includeNumbers}
-                onChange={(e) => setIncludeNumbers(e.target.checked)}
-              />
-              Include Numbers
-            </label>
-          </div>
-          <div>
-            <label>
-              <input
-                type="checkbox"
-                checked={includeSymbols}
-                onChange={(e) => setIncludeSymbols(e.target.checked)}
-              />
-              Include Symbols
-            </label>
-          </div>
-        </div>
+        <div className="checkbox-group">
+        <label className="checkbox-label">
+          <input
+            type="checkbox"
+            checked={includeUpperCase}
+            onChange={(e) => setIncludeUpperCase(e.target.checked)}
+          />
+          <span className="custom-checkbox"></span>
+          Include Uppercase Letters
+        </label>
+        <label className="checkbox-label">
+          <input
+            type="checkbox"
+            checked={includeLowerCase}
+            onChange={(e) => setIncludeLowerCase(e.target.checked)}
+          />
+          <span className="custom-checkbox"></span>
+          Include Lowercase Letters
+        </label>
+        <label className="checkbox-label">
+          <input
+            type="checkbox"
+            checked={includeNumbers}
+            onChange={(e) => setIncludeNumbers(e.target.checked)}
+          />
+          <span className="custom-checkbox"></span>
+          Include Numbers
+        </label>
+        <label className="checkbox-label">
+          <input
+            type="checkbox"
+            checked={includeSymbols}
+            onChange={(e) => setIncludeSymbols(e.target.checked)}
+          />
+          <span className="custom-checkbox"></span>
+          Include Symbols
+        </label>
+      </div>
       </div>
     </div>
   );
