@@ -2,6 +2,8 @@ import type { MetaFunction } from "@remix-run/node";
 import defaultStyles from '~/styles/remix.css'
 import Cuepass from "~/components/Cuepass";
 import PasswordGenerator from "~/components/PasswordGenerator";
+import FooterCopyright from "~/components/FooterCopyright";
+import FooterList from "~/components/FooterList";
 
 export const meta: MetaFunction = () => {
   return [
@@ -20,7 +22,6 @@ export default function Index() {
             <div className="nav-routes">
               <button className="hover-underline-animation">Pricing</button>
               <button className="hover-underline-animation">Docs</button>
-              <button className="hover-underline-animation">Contact</button>
             </div>
           </nav>
           <section className="application">
@@ -29,7 +30,8 @@ export default function Index() {
         </section>
       </main>
       <footer>
-
+        <FooterCopyright />
+        <FooterList />
       </footer>
     </>
   );
