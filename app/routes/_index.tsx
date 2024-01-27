@@ -1,4 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
+import defaultStyles from '~/styles/remix.css'
+import Cuepass from "~/components/Cuepass";
 
 export const meta: MetaFunction = () => {
   return [
@@ -9,33 +11,22 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Welcome to Remix</h1>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
-    </div>
+    <>
+      <main>
+        <section className="container">
+          <nav>
+            <Cuepass />
+            <div className="nav-routes">
+              <button className="hover-underline-animation">Pricing</button>
+              <button className="hover-underline-animation">Docs</button>
+            </div>
+          </nav>
+        </section>
+      </main>
+    </>
   );
+}
+
+export function links() {
+  return [{ rel: 'stylesheet', href: defaultStyles }]
 }

@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  /* APPLICATION COLORS */
+  --default-background: #FFFFFF;
+  --default-highlight-color: #FF1100;
+  --default-border-color: #DCDCDC;
+  --default-text-color: #4B5361;
+  /* APPLICATION FONTS */
+  --default-title: 'Poppins', sans-serif;
+  --default-subtitle: 'IBM Plex Sans', sans-serif;
+  --alternative-subtitle: 'JetBrains Mono', sans-serif;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 8rem;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  position: sticky;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav img {
+  width: 108px;
+}
+
+.nav-routes {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-routes button {
+  font-family: var(--default-subtitle);
+  font-weight: 500;
+  font-size: .875rem;
+  color: var(--default-text-color);
+  transition: ease 150ms;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-routes > button:hover {
+  color: var(--default-highlight-color);
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: var(--default-highlight-color);
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--default-highlight-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
