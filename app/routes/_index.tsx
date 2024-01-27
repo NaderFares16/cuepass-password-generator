@@ -5,8 +5,8 @@ import PasswordGenerator from "~/components/PasswordGenerator";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Cuepass | Password Generator" },
+    { name: "description", content: "Welcome to Cuepass Password Generator!" },
   ];
 };
 
@@ -20,6 +20,7 @@ export default function Index() {
             <div className="nav-routes">
               <button className="hover-underline-animation">Pricing</button>
               <button className="hover-underline-animation">Docs</button>
+              <button className="hover-underline-animation">Contact</button>
             </div>
           </nav>
           <section className="application">

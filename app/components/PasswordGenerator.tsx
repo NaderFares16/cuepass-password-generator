@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -78,56 +79,60 @@ export default function PasswordGenerator() {
           Copy
         </button>
       </div>
-      <div>
-        <label>
-          Length:
+      <div className="generator-options">
+      <div className="generator-length">
+          <label>
+            Characters Length:
+          </label>
           <input
-            type="number"
-            value={length}
-            maxLength={20}
-            onChange={(e) => setLength(parseInt(e.target.value))}
-          />
-        </label>
-      </div>
-      <div>
-        <label>
-          <input
-            type="checkbox"
-            checked={includeUpperCase}
-            onChange={(e) => setIncludeUpperCase(e.target.checked)}
-          />
-          Include Uppercase Letters
-        </label>
-      </div>
-      <div>
-        <label>
-          <input
-            type="checkbox"
-            checked={includeLowerCase}
-            onChange={(e) => setIncludeLowerCase(e.target.checked)}
-          />
-          Include Lowercase Letters
-        </label>
-      </div>
-      <div>
-        <label>
-          <input
-            type="checkbox"
-            checked={includeNumbers}
-            onChange={(e) => setIncludeNumbers(e.target.checked)}
-          />
-          Include Numbers
-        </label>
-      </div>
-      <div>
-        <label>
-          <input
-            type="checkbox"
-            checked={includeSymbols}
-            onChange={(e) => setIncludeSymbols(e.target.checked)}
-          />
-          Include Symbols
-        </label>
+              type="number"
+              value={length}
+              maxLength={20}
+              onChange={(e) => setLength(parseInt(e.target.value))}
+            />
+        </div>
+        <div className="generator-checkbox">
+          <div>
+            <label>
+              <input
+                type="checkbox"
+                checked={includeUpperCase}
+                onChange={(e) => setIncludeUpperCase(e.target.checked)}
+              />
+              Include Uppercase Letters
+            </label>
+          </div>
+          <div>
+            <label>
+              <input
+                type="checkbox"
+                checked={includeLowerCase}
+                onChange={(e) => setIncludeLowerCase(e.target.checked)}
+              />
+              Include Lowercase Letters
+            </label>
+          </div>
+          <div>
+            <label>
+              <input
+                type="checkbox"
+                checked={includeNumbers}
+                onChange={(e) => setIncludeNumbers(e.target.checked)}
+              />
+              Include Numbers
+            </label>
+          </div>
+          <div>
+            <label>
+              <input
+                type="checkbox"
+                checked={includeSymbols}
+                onChange={(e) => setIncludeSymbols(e.target.checked)}
+              />
+              Include Symbols
+            </label>
+          </div>
+        </div>
       </div>
     </div>
   );
