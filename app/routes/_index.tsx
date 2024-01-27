@@ -1,6 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import defaultStyles from '~/styles/remix.css'
 import Cuepass from "~/components/Cuepass";
+import PasswordGenerator from "~/components/PasswordGenerator";
 
 export const meta: MetaFunction = () => {
   return [
@@ -21,8 +22,14 @@ export default function Index() {
               <button className="hover-underline-animation">Docs</button>
             </div>
           </nav>
+          <section className="application">
+            <PasswordGenerator />
+          </section>
         </section>
       </main>
+      <footer>
+
+      </footer>
     </>
   );
 }
